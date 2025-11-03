@@ -1,0 +1,32 @@
+
+---- Config for Router1 (192.168.1.1) ----
+!
+version 15.2
+hostname Router1
+!
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+end
+
+
+---- Config for Switch1 (192.168.1.2) ----
+!
+version 15.2
+hostname Switch1
+!
+interface GigabitEthernet0/0
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+end
+
